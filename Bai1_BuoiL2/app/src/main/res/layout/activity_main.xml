@@ -26,10 +26,11 @@
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:indeterminateDrawable="@drawable/ic_launcher_foreground"
-        app:layout_constraintTop_toBottomOf="@+id/progressBarHorizontal"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp" />
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarHorizontal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

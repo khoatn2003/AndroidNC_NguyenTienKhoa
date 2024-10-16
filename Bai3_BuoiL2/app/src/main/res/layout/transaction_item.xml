@@ -1,0 +1,34 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Tên mục giao dịch -->
+    <TextView
+        android:id="@+id/tv_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item Name"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Số tiền -->
+    <TextView
+        android:id="@+id/tv_item_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount: $100.00"
+        android:textSize="14sp" />
+
+    <!-- Ghi chú -->
+    <TextView
+        android:id="@+id/tv_item_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note: Grocery Shopping"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp" />
+
+</LinearLayout>

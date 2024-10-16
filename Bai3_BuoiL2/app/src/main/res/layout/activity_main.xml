@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 1. RelativeLayout chứa thông tin chung -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2b2222"
+        android:padding="20dp">
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Joint Checking"
+        android:textColor="#FFFF00"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- TextView 2: Date -->
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:text="Date: 2024-10-16"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentEnd="true"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_transaction_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:text="ID: #12345"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+
+    <!-- TextView 4: Transaction Amount -->
+    <TextView
+        android:id="@+id/tv_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_transaction_id"
+        android:text="Amount: $500.00"
+        android:textColor="#ff0000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_amount"
+            android:text="Account: John Doe"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <!-- TextView 6: Description -->
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_account"
+            android:text="Description: Monthly payment"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+    <!-- 2. TextView thông báo trạng thái transaction -->
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Transaction Status: Completed"
+        android:textColor="#4CAF50"
+        android:textSize="16sp"
+        android:gravity="center" />
+
+    <!-- 3. Custom ListView chi tiết các giao dịch -->
+    <ListView
+        android:id="@+id/lv_transaction_details"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+    <!-- 4. TextView chứa thông tin về cân bằng dòng tiền -->
+    <TextView
+        android:id="@+id/tv_balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Remaining Balance: $1,000.00"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Edit"
+            android:background="#000000"
+            android:textColor="#FFFFFF" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_delete"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:background="#000000"
+            android:layout_marginStart="16dp"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+</LinearLayout>
